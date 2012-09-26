@@ -1,0 +1,70 @@
+@import "compass"
+@import "compass/reset"
+
+
+html,
+body
+  background-color: #123
+  font-family: Helvetica, sans-serif
+  height: 100%
+  @include background(radial-gradient(50% 50%, cover, #000 0%, #123 100%))
+
+
+// Logo
+#logo
+  left: 50%
+  margin-left: -288px - 100px
+  margin-top: -168px
+  position: absolute
+  top: 50%
+
+  .slides-container
+    height: 336px
+    width: 288px
+
+    div
+      @extend .slides-container
+
+      &:not(:first-child)
+        display: none
+
+
+// Content
+#content
+  color: #f90
+  font-size: 2em
+  height: 280px
+  left: 50%
+  margin-top: -140px
+  position: absolute
+  top: 50%
+  width: 400px
+
+  h1
+    color: #fd0
+    font-weight: bold
+    margin-bottom: 1em
+
+  p
+    font-size: .6em
+    line-height: 1.5em
+    margin-bottom: 2em
+
+
+// Projects List
+.projects
+
+  a
+    color: #999
+    display: inline-block
+    font-size: .4em
+    font-weight: bold
+    margin-right: 1em
+    text-align: center
+    text-decoration: none
+    width: 110px
+
+  img
+    margin-bottom: .5em
+    @include border-radius(10px)
+    @include box-shadow(inset 0 1px 0 rgba(#fff, .5), 0 0 0 2px rgba(#666, .8))
